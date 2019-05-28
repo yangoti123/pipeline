@@ -28,4 +28,11 @@ node {
 		  sh "ssh ec2-user@${tomcatDevIp} ${tomcatStart}"
        }
    }
+   stage('Email Notification'){
+		mail bcc: '', body: '''Hi Team, You build successfully deployed
+
+Thanks,
+DevOps Team''', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'hari.kammana@gmail.com'
+   
+   }
 }
