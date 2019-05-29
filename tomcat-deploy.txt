@@ -5,7 +5,7 @@ node {
     // Clone repo
 	git branch: 'master', 
 	credentialsId: 'github', 
-	url: 'https://github.com/javahometech/myweb'
+	url: 'https://github.com/javahometech/pipeline'
    
    }
 	
@@ -16,8 +16,8 @@ node {
    }
    
    stage('deploy-dev'){
-       def tomcatDevIp = '172.31.28.172'
-	   def tomcatHome = '/opt/tomcat8/'
+       def tomcatDevIp = '18.221.86.54'
+	   def tomcatHome = '/opt/tomcat/'
 	   def webApps = tomcatHome+'webapps/'
 	   def tomcatStart = "${tomcatHome}bin/startup.sh"
 	   def tomcatStop = "${tomcatHome}bin/shutdown.sh"
@@ -32,7 +32,7 @@ node {
 		mail bcc: '', body: '''Hi Team, You build successfully deployed
 
 Thanks,
-DevOps Team''', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'hari.kammana@gmail.com'
+DevOps Team''', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'ybr4b9@gmail.com'
    
    }
 }
