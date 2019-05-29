@@ -5,7 +5,7 @@ node {
     // Clone repo
 	git branch: 'master', 
 	credentialsId: 'github', 
-	url: 'https://github.com/pipeline'
+	url: 'https://github.com/yangoti123/pipeline'
    
    }
 	
