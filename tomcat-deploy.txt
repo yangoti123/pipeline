@@ -5,7 +5,7 @@ node {
     // Clone repo
 	git branch: 'master', 
 	credentialsId: 'github', 
-	url: 'https://github.com/javahometech/pipeline'
+	url: 'https://github.com/pipeline'
    
    }
 	
